@@ -6,6 +6,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateCustomFontLabel()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(updateCustomFontLabel),
+            name: UIContentSizeCategory.didChangeNotification,
+            object: nil
+        )
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc private func updateCustomFontLabel() {
         customFontLabel.font = genericResizableFont()
     }
 
