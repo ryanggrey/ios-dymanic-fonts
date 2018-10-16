@@ -1,6 +1,10 @@
 # Dynamic Fonts App
 A project to demo how to support dynamic fonts in an iOS application
 
+# Pre-requisites
+- iOS 12
+- Xcode 10
+
 # Built-in Fonts
 Supported directly through Storyboards with no code required
 - Use a system font
