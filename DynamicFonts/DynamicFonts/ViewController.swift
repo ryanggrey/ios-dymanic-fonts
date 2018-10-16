@@ -28,7 +28,8 @@ class ViewController: UIViewController {
 
     private func genericResizableFont() -> UIFont {
         let categoryLargeSize: CGFloat = 17
-        guard let customFont = UIFont(name: "Rockwell", size: categoryLargeSize) else {
+        let fontName = UIAccessibility.isBoldTextEnabled ? "Rockwell-Bold" : "Rockwell"
+        guard let customFont = UIFont(name: fontName, size: categoryLargeSize) else {
             return UIFont.systemFont(ofSize: categoryLargeSize);
         }
         
