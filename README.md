@@ -9,12 +9,15 @@ A project to demo how to support dynamic fonts in an iOS application
 Supported directly through Storyboards with no code required
 - Use a system font
 - Use Attributes Inspector to check Automatically Adjusts Font box
+    - This gives us live size adjustments without an app restart being needed
 - Use Attributes Inspector to set Font to be a Text Style (such as body)
 
 Example: See "Built-in Font" label in `Main.storyboard`.
 
 # Custom Fonts
-Code level required meaning we must
+Code and Storyboard changes required:
+- Use Attributes Inspector to check Automatically Adjusts Font box
+    - This gives us live size adjustments without an app restart being needed
 - Create an `IBOutlet` for our text element
 - Programmatically create custom `UIFont` with size for large font category
     - `UIFontMetrics` will auto-scale down for other categories
